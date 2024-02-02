@@ -17,6 +17,9 @@
 - (id) init;    //Create an empty matrix
 - (id) initZeroWithRows: (int) numOfRows Columns: (int) numOfCols;  //Create zero matrix
 - (id) initWithRows: (int) numOfRows Columns: (int) numOfCols Numbers: (int[]) numbers;
+
 - (IntMatrix*) add: (IntMatrix*) matrixTwo;
-- (IntMatrix*) multiply: (IntMatrix*) matrixTwo;
+- (IntMatrix*) subtract: (IntMatrix*) matrixTwo;
+- (IntMatrix*) multiplyByInt: (int) multiplier;
+- (IntMatrix*) multiplyByMatrix: (IntMatrix*) matrixTwo;
 @end

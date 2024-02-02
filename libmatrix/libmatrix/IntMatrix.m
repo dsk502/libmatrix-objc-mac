@@ -21,7 +21,6 @@
     if(self = [super init]) {
         self->numOfRows = numOfRows;
         self->numOfCols = numOfCols;
-        //self->numbers = new int*[5];
         self->numbers = (int**)malloc(numOfRows * sizeof(int*));    //Rows first, numbers[i][j] means ith row jth column
         for(int i = 0; i < numOfRows; i++) {
             (self->numbers)[i] = (int*)calloc(numOfCols, sizeof(int));
@@ -56,6 +55,44 @@
                 (result->numbers)[i][j] = (self->numbers)[i][j] + (matrixTwo->numbers)[i][j];
             }
         }
+        return result;
+    }
+    else {
+        return NULL;
+    }
+}
+
+//Subtract matrixTwo from this matrix
+- (IntMatrix*) subtract: (IntMatrix*) matrixTwo {
+    if(self->numOfRows == matrixTwo->numOfRows && self->numOfCols == matrixTwo->numOfCols) {
+        IntMatrix* result = [[IntMatrix alloc] initZeroWithRows:self->numOfRows Columns:self->numOfCols];
+        for(int i = 0; i < numOfRows; i++) {
+            for(int j = 0; j < numOfRows; j++) {
+                (result->numbers)[i][j] = (self->numbers)[i][j] - (matrixTwo->numbers)[i][j];
+            }
+        }
+        return result;
+    }
+    else {
+        return NULL;
+    }
+}
+
+- (IntMatrix*) multiplyByInt: (int) multiplier {
+    IntMatrix* result = [[IntMatrix alloc] initZeroWithRows:self->numOfRows Columns:self->numOfCols];
+    for(int i = 0; i < numOfRows; i++) {
+        for(int j = 0; j < numOfRows; j++) {
+            (result->numbers)[i][j] = (self->numbers)[i][j] * multiplier;
+        }
+    }
+    return result;
+}
+
+//this matrix * matrixTwo
+- (IntMatrix*) multiplyByMatrix: (IntMatrix*) matrixTwo {
+    if(self->numOfCols == matrixTwo->numOfRows) {
+        IntMatrix* result = [[IntMatrix alloc] initZeroWithRows:self->numOfRows Columns:matrixTwo->numOfCols];
+        //Todo: implement multiply
         return result;
     }
     else {
