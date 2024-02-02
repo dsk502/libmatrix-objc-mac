@@ -15,4 +15,5 @@ FOUNDATION_EXPORT const unsigned char libmatrixVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <libmatrix/PublicHeader.h>
 #import <libmatrix/IntMatrix.h>
+#import <libmatrix/DoubleMatrix.h>
 

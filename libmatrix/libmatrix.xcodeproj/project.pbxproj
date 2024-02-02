@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1E9E0F422B6CA28E00B8A200 /* libmatrix.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E0F412B6CA28E00B8A200 /* libmatrix.docc */; };
 		1E9E0F432B6CA28E00B8A200 /* libmatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E9E0F402B6CA28E00B8A200 /* libmatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E9E0F4B2B6CA2FD00B8A200 /* IntMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E9E0F492B6CA2FD00B8A200 /* IntMatrix.h */; };
+		1E9E0F4B2B6CA2FD00B8A200 /* IntMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E9E0F492B6CA2FD00B8A200 /* IntMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E9E0F4C2B6CA2FD00B8A200 /* IntMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E0F4A2B6CA2FD00B8A200 /* IntMatrix.m */; };
-		1E9E0F4F2B6CA39600B8A200 /* DoubleMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E9E0F4D2B6CA39600B8A200 /* DoubleMatrix.h */; };
+		1E9E0F4F2B6CA39600B8A200 /* DoubleMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E9E0F4D2B6CA39600B8A200 /* DoubleMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E9E0F502B6CA39600B8A200 /* DoubleMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E0F4E2B6CA39600B8A200 /* DoubleMatrix.m */; };
 /* End PBXBuildFile section */
 
@@ -207,7 +207,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -263,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -291,10 +291,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dsk502.libmatrix;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
@@ -318,10 +319,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dsk502.libmatrix;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
