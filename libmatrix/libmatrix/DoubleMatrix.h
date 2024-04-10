@@ -11,7 +11,7 @@
 @public
     int numOfRows;
     int numOfCols;
-    double* numbers[];
+    double *numbers[];
 }
 
 @end

@@ -17,7 +17,7 @@
     return self;
 }
 
-- (id) initZeroWithRows: (int) numOfRows Columns: (int) numOfCols {
+- (id) initAllZeroWithRows: (int) numOfRows Columns: (int) numOfCols {
     if(self = [super init]) {
         self->numOfRows = numOfRows;
         self->numOfCols = numOfCols;
@@ -49,7 +49,7 @@
 
 - (IntMatrix*) add: (IntMatrix*) matrixTwo {
     if(self->numOfRows == matrixTwo->numOfRows && self->numOfCols == matrixTwo->numOfCols) {
-        IntMatrix* result = [[IntMatrix alloc] initZeroWithRows:self->numOfRows Columns:self->numOfCols];
+        IntMatrix* result = [[IntMatrix alloc] initAllZeroWithRows:self->numOfRows Columns:self->numOfCols];
         for(int i = 0; i < numOfRows; i++) {
             for(int j = 0; j < numOfRows; j++) {
                 (result->numbers)[i][j] = (self->numbers)[i][j] + (matrixTwo->numbers)[i][j];
@@ -65,7 +65,7 @@
 //Subtract matrixTwo from this matrix
 - (IntMatrix*) subtract: (IntMatrix*) matrixTwo {
     if(self->numOfRows == matrixTwo->numOfRows && self->numOfCols == matrixTwo->numOfCols) {
-        IntMatrix* result = [[IntMatrix alloc] initZeroWithRows:self->numOfRows Columns:self->numOfCols];
+        IntMatrix* result = [[IntMatrix alloc] initAllZeroWithRows:self->numOfRows Columns:self->numOfCols];
         for(int i = 0; i < numOfRows; i++) {
             for(int j = 0; j < numOfRows; j++) {
                 (result->numbers)[i][j] = (self->numbers)[i][j] - (matrixTwo->numbers)[i][j];
@@ -79,7 +79,7 @@
 }
 
 - (IntMatrix*) multiplyByInt: (int) multiplier {
-    IntMatrix* result = [[IntMatrix alloc] initZeroWithRows:self->numOfRows Columns:self->numOfCols];
+    IntMatrix* result = [[IntMatrix alloc] initAllZeroWithRows:self->numOfRows Columns:self->numOfCols];
     for(int i = 0; i < numOfRows; i++) {
         for(int j = 0; j < numOfRows; j++) {
             (result->numbers)[i][j] = (self->numbers)[i][j] * multiplier;
@@ -91,8 +91,13 @@
 //this matrix * matrixTwo
 - (IntMatrix*) multiplyByMatrix: (IntMatrix*) matrixTwo {
     if(self->numOfCols == matrixTwo->numOfRows) {
-        IntMatrix* result = [[IntMatrix alloc] initZeroWithRows:self->numOfRows Columns:matrixTwo->numOfCols];
-        //Todo: implement multiply
+        IntMatrix* result = [[IntMatrix alloc] initAllZeroWithRows:self->numOfRows Columns:matrixTwo->numOfCols];
+        
+        for(int i = 0; i < numOfRows; i++)
+            for(int j = 0; j < numOfCols; j++)
+                for(int p = 0; p < self->numOfCols; p++)
+                    result[i][j] += (self->numbers)[i][p] * (matrixTwo->numbers)[p][j];
+        
         return result;
     }
     else {
@@ -106,5 +111,6 @@
     }
     free(numbers);
     numbers = NULL;
+    NSLog(@"matrix dealloced");
 }
 @end
