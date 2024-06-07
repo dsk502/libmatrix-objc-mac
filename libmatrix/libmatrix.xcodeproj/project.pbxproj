@@ -14,6 +14,7 @@
 		1E9E0F4C2B6CA2FD00B8A200 /* IntMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E0F4A2B6CA2FD00B8A200 /* IntMatrix.m */; };
 		1E9E0F4F2B6CA39600B8A200 /* DoubleMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E9E0F4D2B6CA39600B8A200 /* DoubleMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E9E0F502B6CA39600B8A200 /* DoubleMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E0F4E2B6CA39600B8A200 /* DoubleMatrix.m */; };
+		1EDB870D2BC678EA00ECD55C /* IntMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E0F4A2B6CA2FD00B8A200 /* IntMatrix.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -199,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EDB870D2BC678EA00ECD55C /* IntMatrix.m in Sources */,
 				1E9C02542BC666D200F08FF0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
