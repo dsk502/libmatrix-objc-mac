@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E8DB2D82C19E4A8009406B6 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E8DB2D62C19E4A8009406B6 /* Matrix.h */; };
+		1E8DB2D92C19E4A8009406B6 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8DB2D72C19E4A8009406B6 /* Matrix.m */; };
+		1E8DB2DA2C19E7F6009406B6 /* Matrix.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E8DB2D72C19E4A8009406B6 /* Matrix.m */; };
 		1E9C02542BC666D200F08FF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9C02532BC666D200F08FF0 /* main.m */; };
 		1E9E0F422B6CA28E00B8A200 /* libmatrix.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E0F412B6CA28E00B8A200 /* libmatrix.docc */; };
 		1E9E0F432B6CA28E00B8A200 /* libmatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E9E0F402B6CA28E00B8A200 /* libmatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +33,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E8DB2D62C19E4A8009406B6 /* Matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
+		1E8DB2D72C19E4A8009406B6 /* Matrix.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Matrix.m; sourceTree = "<group>"; };
 		1E9C02512BC666D200F08FF0 /* libmatrixTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = libmatrixTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9C02532BC666D200F08FF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E9E0F3D2B6CA28E00B8A200 /* libmatrix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libmatrix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +99,8 @@
 				1E9E0F4A2B6CA2FD00B8A200 /* IntMatrix.m */,
 				1E9E0F4D2B6CA39600B8A200 /* DoubleMatrix.h */,
 				1E9E0F4E2B6CA39600B8A200 /* DoubleMatrix.m */,
+				1E8DB2D62C19E4A8009406B6 /* Matrix.h */,
+				1E8DB2D72C19E4A8009406B6 /* Matrix.m */,
 			);
 			path = libmatrix;
 			sourceTree = "<group>";
@@ -108,6 +115,7 @@
 				1E9E0F4F2B6CA39600B8A200 /* DoubleMatrix.h in Headers */,
 				1E9E0F432B6CA28E00B8A200 /* libmatrix.h in Headers */,
 				1E9E0F4B2B6CA2FD00B8A200 /* IntMatrix.h in Headers */,
+				1E8DB2D82C19E4A8009406B6 /* Matrix.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8DB2DA2C19E7F6009406B6 /* Matrix.m in Sources */,
 				1EDB870D2BC678EA00ECD55C /* IntMatrix.m in Sources */,
 				1E9C02542BC666D200F08FF0 /* main.m in Sources */,
 			);
@@ -209,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8DB2D92C19E4A8009406B6 /* Matrix.m in Sources */,
 				1E9E0F4C2B6CA2FD00B8A200 /* IntMatrix.m in Sources */,
 				1E9E0F502B6CA39600B8A200 /* DoubleMatrix.m in Sources */,
 				1E9E0F422B6CA28E00B8A200 /* libmatrix.docc in Sources */,

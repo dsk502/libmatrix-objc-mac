@@ -6,11 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Matrix.h"
 
-@interface IntMatrix : NSObject {
+@interface IntMatrix : Matrix {
 @public
-    int numOfRows;
-    int numOfCols;
+    
     int** numbers;
 }
 

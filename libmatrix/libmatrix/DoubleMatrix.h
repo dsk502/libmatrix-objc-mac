@@ -5,13 +5,13 @@
 //  Created by dsk502 on 2/2/2024.
 //
 
+#import "Matrix.h"
+
 #import <Foundation/Foundation.h>
 
-@interface DoubleMatrix : NSObject {
+@interface DoubleMatrix : Matrix {
 @public
-    int numOfRows;
-    int numOfCols;
-    double *numbers[];
+    double **numbers;
 }
 
 @end
