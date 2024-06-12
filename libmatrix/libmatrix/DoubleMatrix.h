@@ -14,4 +14,13 @@
     double **numbers;
 }
 
+- (id) init;
+- (id) initZeroWithRows: (int) numOfRows Columns: (int) numOfCols;
+- (id) initWithRows: (int) numOfRows Columns: (int) numOfCols Numbers: (double[]) numbers;
+
+- (DoubleMatrix*) add: (DoubleMatrix*) matrixTwo;
+- (DoubleMatrix*) subtract: (DoubleMatrix*) matrixTwo;
+- (DoubleMatrix*) multiplyByNumber: (double) multiplier;
+- (DoubleMatrix*) multiplyByMatrix: (DoubleMatrix*) matrixTwo;
+
 @end
